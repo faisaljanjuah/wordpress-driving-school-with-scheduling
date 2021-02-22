@@ -1,0 +1,142 @@
+<div class="row form-group">
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_fullName">Full Name <span>*</span></label>[text* full-name class:form-control id:t_fullName]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_learnerPermit">Learner Permit# <span>*</span></label>[text* t_learnerPermit class:form-control id:t_learnerPermit]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_issueDate">Issue Date <span>*</span></label>[text* t_issueDate class:form-control id:t_issueDate]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_expirationDate">Expiration Date <span>*</span></label>[text* t_expirationDate class:form-control id:t_expirationDate]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_Dob">Date of Birth <span>*</span></label>[text* t_Dob class:form-control id:t_Dob]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_email">Email ID <span>*</span></label>[email* t_email class:form-control id:t_email]
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 mb-20">
+        <label class="text-black" for="t_Address">Address <span>*</span></label>[text* t_Address class:form-control id:t_Address]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_CityName">City Name <span>*</span></label>[text* t_CityName class:form-control id:t_CityName]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_State">State <span>*</span></label>[text* t_State class:form-control id:t_State]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_zipCode">Zip Code <span>*</span></label>[text* t_zipCode class:form-control id:t_zipCode]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_homePhone">Home Phone</label>[text t_homePhone class:form-control id:t_homePhone]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_cellPhone">Cell Phone <span>*</span></label>[text* t_cellPhone class:form-control id:t_cellPhone]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_highSchoolName">High School Name</label>[text t_highSchoolName class:form-control id:t_highSchoolName]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_gpa">Your GPA <span>*</span></label>[text* t_gpa class:form-control id:t_gpa]
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+        <label class="text-black" for="t_wdys">When Do you want to Start</label>[text t_wdys class:form-control id:t_wdys]
+    </div>
+</div>
+
+<div class="row scheduleClass">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="eRadio mt-10 mb-20">
+            <input type="radio" checked name="s_class" id="scheduleNow" /><label for="scheduleNow">Schedule my class now</label>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="eRadio mt-10 mb-20">
+            <input type="radio" name="s_class" id="scheduleLater" /><label for="scheduleLater">Schedule my class later</label>
+        </div>
+    </div>
+</div>
+
+<div class="scheduleFields">
+    <div class="row form-group ">
+        <div class="col-xs-12 col-sm-6 mb-20">
+            <label class="text-black" for="schDate">Date <span>*</span></label><input name="scheduledDate" type="text" data-field="date" data-format="dd-MMM-yyyy" readonly class="form-control" id="schDate" />
+        </div>
+        <div class="col-xs-12 col-sm-6 mb-20">
+            <label class="text-black" for="schTime">Time <span>*</span></label><input name="scheduledTime" type="text" data-field="time" data-format="hh:mm AA" readonly class="form-control" id="schTime" />
+        </div>
+    </div>
+</div>
+
+<div class="row form-group">
+    <div class="col-xs-12 mb-20">
+        <button type="submit" class="btn btn-wide wpcf7-form-control wpcf7-submit">Register</button>
+    </div>
+</div>
+
+<!-- Schedule Form -->
+
+<h4>If you are already enrolled then you can create or update your class schedule.</h4>
+<div class="row scheduleClass">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="eRadio mt-10 mb-20">
+            <input type="radio" checked name="regCheck" id="alreadyReg" /><label for="alreadyReg">I'm already registered</label>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="eRadio mt-10 mb-20">
+            <input type="radio" name="regCheck" id="notReg" /><label for="notReg">I'm not registered</label>
+        </div>
+    </div>
+    <div class="hideBtn">
+        <div class="col-xs-12">
+            <div class="eRadio mt-10 mb-20">
+                <a href="http://localhost/eagle/registration/" class="btn btn-wide">Register Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="registrationInfo">
+    <div class="row form-group">
+        <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+            <label class="text-black" for="s_fullName">Full Name <span>*</span></label>[text* sFullName class:form-control id:s_fullName]
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 mb-20">
+            <label class="text-black" for="s_email">Email ID <span>*</span></label>[email* s_emailID class:form-control id:s_email]
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 mb-20">
+            <label class="text-black" for="s_phone">Cell Phone <span>*</span></label>[text* s_phone class:form-control id:s_phone]
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 mb-20">
+            <button type="button" class="btn btn-wide btn-verify">Verify</button>
+        </div>
+    </div>
+</div>
+<div class="scheduleFields">
+    <div class="row form-group ">
+        <div class="col-xs-12 col-sm-6 mb-20">
+            <label class="text-black" for="schDate">Date <span>*</span></label><input name="scheduledDate" type="text" data-field="date" data-format="dd-MMM-yyyy" readonly class="form-control" id="schDate" />
+        </div>
+        <div class="col-xs-12 col-sm-6 mb-20">
+            <label class="text-black" for="schTime">Time <span>*</span></label><input name="scheduledTime" type="text" data-field="time" data-format="hh:mm AA" readonly class="form-control" id="schTime" />
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-xs-12 mb-20">
+            <button type="submit" class="btn btn-wide wpcf7-form-control wpcf7-submit">Schedule Now</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+

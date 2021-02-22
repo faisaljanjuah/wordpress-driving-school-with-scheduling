@@ -1,0 +1,12 @@
+<div class="wrap">
+    <h1 class="wp-heading-inline">Delete Form: "Form Name"</h1>
+    <hr class="wp-header-end">
+
+    <div class="page-content wpsf_table">
+
+    <?php
+
+    ?>
+
+    </div>
+</div>

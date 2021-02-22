@@ -1,0 +1,264 @@
+
+@include mediaScreen($minWidth,$lg){ /* min 1200 */
+
+}
+@include mediaScreen($maxWidth,$lg){ /* max 1199 */
+    .topMenu {
+        .menuList {
+            & li {
+                & a {
+                    padding-left: 12px;
+                    padding-right: 12px;
+                }
+            }
+        }
+    }
+    .sliderContentWrapper .dib {
+        margin-top: 20%;
+    }
+}
+@include mediaScreen($minWidth,$md){ /* min 992 */
+
+}
+@include mediaScreen($maxWidth,$md){ /* max 991 */
+
+}
+@media only screen and (max-width: 899px){
+
+}
+
+@include mediaScreen($minWidth,$sm){ /* min 768px */
+    .videoSlide {
+        display: block;
+    }
+    .mobileVideo {
+        display: none;
+    }
+    header .menuList {
+        display: block !important;
+    }
+    .page-courses {
+        & .type-page {
+            & .flex {
+                display: -webkit-flex; /* Safari */
+                display: flex;
+                margin-top: 16px;
+                margin-bottom: 16px;
+                & > div {
+                    -webkit-flex: 1;  /* Safari 6.1+ */
+                    -ms-flex: 1;  /* IE 10 */
+                    flex: 1;
+                }
+                & .pakageBlock {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include mediaScreen($maxWidth,$sm){ /* max 767px */
+    .contactBar {
+        text-align: right;
+    }
+    .hamburger {
+        display: block;
+    }
+    header {
+        top: 76px;
+    }
+    header .menuList {
+        display: none;
+    }
+    .contactBar .contactMenu {
+        float: none;
+        & li {
+            margin: 0;
+            &:nth-child(1) {
+                float: left;
+            }
+            &::nth-child(2) {
+                float: right;
+            }
+            & a {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    
+    .topMenu {
+        & .menuList {
+            left: 0;
+            right: 0;
+            top: 100%;
+            position: absolute;
+            background: rgba(0,0,0,0.95);
+            & li {
+                display: block;
+                & a {
+                    text-align: center;
+                    padding: 8px 30px;
+                }
+            }
+        }
+        & .logo {
+            display: block;
+            & img {
+                float: left;
+                max-height: 60px;
+            }
+        }
+    }
+	.videoSlide {
+        display: none;
+    }
+	.mobileVideo {
+        display: block;
+    }
+    .about {
+        & .about-box {
+            position: static;
+            padding: 35px 15px;
+            & h2 {
+                margin-top: 0;
+            }
+        }
+    }
+    .titleImage {
+        height: 260px;
+    }
+    .sliderContentWrapper {
+        &  .sliderContent {
+            left: 0;
+            right: 0;
+            width: 100%;
+            margin: auto;
+            min-width: auto;
+            text-align: center;
+        }
+        & .dib {
+            text-align: center;
+        }
+        & a {
+            display: block;
+        }
+    }
+    .whoWeAre {
+        margin: 0;
+        padding: 15px 0;
+    }
+    .aboutSlider {
+        margin-bottom: 40px;
+    }
+    .section-title {
+        margin: 10px 0;
+        font-size: 30px;
+        text-align: center;
+    }
+    .scheduleBlock {
+        text-align: center;
+        & img {
+            margin: 0 auto;
+        }
+    }
+    .approachBlocks li p {
+        margin-bottom: 10px;
+    }
+    .srBlock {
+        margin-top: 20px;
+    }
+    .contact {
+        & .section-title {
+            margin-bottom: 20px;
+        }
+        & .form-group {
+            & .col-md-6.mb-30, & .col-md-12.mb-30 {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .contactForm label {
+        margin-bottom: 0;
+    }
+    .contactForm, .addressBlock {
+        padding: 20px;
+    }
+    footer {
+        padding: 50px 0 0 0;
+    }
+    .copyrights {
+        margin-top: 0;
+        padding: 20px 0;
+    }
+    .page-content {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .contactForm {
+        border-radius: 4px 4px 0 0;
+    }
+    .addressBlock {
+        border-radius: 0 0 4px 4px;
+    }
+    .about, .scheduleArea, .ourServices, .ourApproach, .testimonials, .contact {
+        padding: 20px 0;
+    }
+}
+
+@include mediaScreen($minWidth,$xs){ /* min 560px */
+
+}
+
+@include mediaScreen($maxWidth,$xs){ /* max 559px */
+
+}
+
+@include mediaScreen2($sm, $md){ /* min-width   to   max-width */
+
+}
+@media only screen and (max-width: 519px){
+    .digitalClock > div {
+        font-size: 20px;
+        padding: 0px 6px;
+        line-height: 24px;
+    }
+    .contactBar {
+        & .selectLanguage {
+            margin: 18px 0;
+        }
+        & .contactMenu {
+            float: none;
+            margin: 4px 0;
+            & li {
+                margin: 0;
+                float: none;
+                display: block;
+                text-align: right;
+                & a {
+                    padding: 0;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    header {
+        top: 70px;
+    }
+}
+@media only screen and (max-width: 330px){
+    .logoText {
+        font-size: 32px;
+    }
+}
+@media only screen and (max-height: 400px){
+
+}
+@media only screen and (min-height: 640px){
+
+}
+@media only screen and (max-height: 639px){
+    .hidden {
+        display: none;
+    }
+}

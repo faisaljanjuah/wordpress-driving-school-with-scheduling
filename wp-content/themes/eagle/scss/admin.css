@@ -1,0 +1,23 @@
+div#titlediv {
+    margin-bottom: 20px;
+}
+#posts-filter table.wp-list-table.tags tbody tr:nth-child(odd){
+	background: #F1f1f1;
+}
+#posts-filter table.wp-list-table.tags tr td:first-child{
+	width: 46px;
+	padding: 8px 0;
+	text-align: center;
+	background: rgba(255,0,0,0.15);
+}
+.quicklinks ul#wp-admin-bar-root-default li#wp-admin-bar-wp-logo.menupop {
+	display: none;
+}
+/* Hiding Contact form 7 from unexpected edit */
+/* li#toplevel_page_wpcf7 {
+	display:  none;
+}
+li#toplevel_page_wpcf7 + .wp-menu-separator {
+	display:  none;
+} */
+/* Contact Form 7 end */

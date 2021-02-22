@@ -1,0 +1,15 @@
+[04-Jul-2019 09:47:23 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in F:\wamp64\www\eagle\wp-admin\includes\translation-install.php on line 65
+[04-Jul-2019 09:47:23 UTC] PHP Stack trace:
+[04-Jul-2019 09:47:23 UTC] PHP   1. {main}() F:\wamp64\www\eagle\wp-admin\options-general.php:0
+[04-Jul-2019 09:47:23 UTC] PHP   2. require_once() F:\wamp64\www\eagle\wp-admin\options-general.php:10
+[04-Jul-2019 09:47:23 UTC] PHP   3. require_once() F:\wamp64\www\eagle\wp-admin\admin.php:233
+[04-Jul-2019 09:47:23 UTC] PHP   4. do_action() F:\wamp64\www\eagle\wp-admin\admin-header.php:104
+[04-Jul-2019 09:47:23 UTC] PHP   5. WP_Hook->do_action() F:\wamp64\www\eagle\wp-includes\plugin.php:465
+[04-Jul-2019 09:47:23 UTC] PHP   6. WP_Hook->apply_filters() F:\wamp64\www\eagle\wp-includes\class-wp-hook.php:310
+[04-Jul-2019 09:47:23 UTC] PHP   7. TRP_Settings->enqueue_scripts_and_styles() F:\wamp64\www\eagle\wp-includes\class-wp-hook.php:286
+[04-Jul-2019 09:47:23 UTC] PHP   8. TRP_Languages->get_all_language_codes() F:\wamp64\www\eagle\wp-content\plugins\translatepress-multilingual\includes\class-settings.php:305
+[04-Jul-2019 09:47:23 UTC] PHP   9. TRP_Languages->get_languages() F:\wamp64\www\eagle\wp-content\plugins\translatepress-multilingual\includes\class-languages.php:115
+[04-Jul-2019 09:47:23 UTC] PHP  10. TRP_Languages->get_wp_languages() F:\wamp64\www\eagle\wp-content\plugins\translatepress-multilingual\includes\class-languages.php:25
+[04-Jul-2019 09:47:23 UTC] PHP  11. wp_get_available_translations() F:\wamp64\www\eagle\wp-content\plugins\translatepress-multilingual\includes\class-languages.php:67
+[04-Jul-2019 09:47:23 UTC] PHP  12. translations_api() F:\wamp64\www\eagle\wp-admin\includes\translation-install.php:126
+[04-Jul-2019 09:47:23 UTC] PHP  13. trigger_error() F:\wamp64\www\eagle\wp-admin\includes\translation-install.php:65

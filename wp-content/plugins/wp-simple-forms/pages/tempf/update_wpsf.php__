@@ -1,0 +1,106 @@
+<?php
+
+    // global $wpdb;
+    // $post_detail = get_post($post_id);
+
+    // if(isset($_POST['wpsf_submit'])) {
+    //     print_r($_REQUEST);
+    // }
+
+    // $action = isset($_REQUEST['action']) ? trim($_REQUEST['action']) : "";
+    // $postid = isset($_REQUEST['id']) ? intval($_REQUEST['id']) : "";
+
+    // $rowDetail = $wpdb->get_row(
+    //     "SELECT * FROM ".$wpdb->posts." WHERE id=$postid"
+    // );
+
+    // global $wpdb;
+    // $wpdb->update($wpdb->posts, array(
+    //     'post_title'=> "This is new Text",
+    //     // 'post_content'=> "This is new Text"
+    // ),
+    // array(
+    //     'id'=>$post_id
+    // ));
+
+    global $wpdb;
+    $notice = '';
+    $title = '';
+    $shortcode = '';
+    $form = '';
+    $wpsfTable = $wpdb->prefix.'wpsf';
+
+    if(isset($_POST['wpsf_submit_new_form'])) {
+        // $title = isset($_GET['wpsf_title']) ? trim($_GET['wpsf_title']) : "";
+        // $shortcode = isset($_GET['wpsf_shortcode']) ? trim($_GET['wpsf_shortcode']) : "";
+        // $form = isset($_GET['wpsf_form']) ? trim($_GET['wpsf_form']) : "";
+
+        $wpdb->insert($wpsfTable, array(
+            "title"=> $_POST['wpsf_title'],
+            "shortcode"=> $_POST['wpsf_shortcode'],
+            "form"=> $_POST['wpsf_form']
+        ));
+        $new_record = $wpdb->insert_id;
+        
+        $row_detail = $wpdb->get_row(
+            $wpdb->prepare(
+                "SELECT * FROM ".$wpsfTable." WHERE ID=%d",$new_record
+            ), ARRAY_A // convert object into array for $row_detail with isset() function
+        );
+        $title = isset($row_detail['title']) ? $row_detail['title'] : '';
+        $shortcode = isset($row_detail['shortcode']) ? $row_detail['shortcode'] : '';
+        $form = isset($row_detail['form']) ? $row_detail['form'] : '';
+
+        // Message Printing
+        if( $new_record > 0 ) {
+            $notice = '<div id="message" class="updated notice is-dismissible">';
+            $notice .= '<p>Form has been saved Successfully. ID: '.$new_record.'</p>';
+            $notice .= '<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>';
+            $notice .= '</div>';
+        }
+        else {
+            $notice = '<div id="message" class="error notice is-dismissible">';
+            $notice .= '<p>Failed to save form.</p>';
+            $notice .= '<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>';
+            $notice .= '</div>';
+        }
+
+    }
+    else {
+        
+    }
+
+?>
+<div class="wrap">
+    <h1 class="wp-heading-inline">Update Form: "<?php echo $title; ?>"</h1>
+    <hr class="wp-header-end">
+
+    <?php echo $notice; ?>
+
+    <div class="page-content wpsf_table">
+
+        <form method="post" name="update_wpsf_form" action="<?php echo $_SERVER['PHP_SELF']; ?>?page=wp_simple_forms&action=wpsf_edit">
+
+            <p>
+                <label>Title</label>
+                <input type="text" name="wpsf_title" required value="<?php echo $title; ?>" />
+            </p>
+
+            <p>
+                <label>Shortcode</label>
+                <input type="text" name="wpsf_shortcode" required value="<?php echo $shortcode; ?>" />
+            </p>
+
+            <p>
+                <label>Form</label>
+                <input type="text" name="wpsf_form" required value="<?php echo $form; ?>" />
+            </p>
+
+            <p>
+                <button type="submit" name="wpsf_submit_update_form">Update</button>
+            </p>
+
+        </form>
+
+    </div>
+</div>

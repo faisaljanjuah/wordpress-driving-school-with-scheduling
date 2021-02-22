@@ -1,0 +1,38 @@
+<?php
+
+    $notice = '';
+
+?>
+<div class="wrap">
+    <h1 class="wp-heading-inline">Add New Form</h1>
+    <hr class="wp-header-end">
+
+    <?php echo $notice; ?>
+
+    <div class="page-content wpsf_table">
+
+        <form method="post" name="wpsf_form" action="<?php echo $_SERVER['PHP_SELF']; ?>?page=wp_simple_forms&action=wpsf_edit">
+            
+            <p>
+                <label>Title</label>
+                <input type="text" name="wpsf_title" required />
+            </p>
+            
+            <p>
+                <label>Shortcode</label>
+                <input type="text" name="wpsf_shortcode" required />
+            </p>
+            
+            <p>
+                <label>Form</label>
+                <input type="text" name="wpsf_form" required />
+            </p>
+
+            <p>
+                <button type="submit" name="wpsf_submit_new_form">Save Form</button>
+            </p>
+
+        </form>
+
+    </div>
+</div>
